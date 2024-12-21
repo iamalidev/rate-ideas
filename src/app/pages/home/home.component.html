@@ -1,0 +1,8 @@
+<main class="p-6 pb-2 bg-white">
+  <app-navbar />
+  <div class="py-6">
+    <app-tab (tabChange)="onTabsChange($event)" [tabs]="tabs()" />
+  </div>
+
+  {{ activeTab() }}
+</main>

@@ -1,0 +1,56 @@
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: url("../../../assets/images/auth-bg.svg") no-repeat center;
+  background-size: contain;
+  background-position: right center;
+  background-clip: content-box;
+}
+
+.login-content {
+  max-width: 570px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.login-typography {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-title {
+  font-size: 46px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.login-text {
+  font-size: 22px;
+  font-weight: 500;
+  color: #667085;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-btn {
+  height: 54px;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #02bf67 !important;
+  font-size: 16px;
+  font-weight: 600;
+  margin-block: 24px;
+}
