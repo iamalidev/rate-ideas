@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { IconService } from './shared/services/icon.service';
 
 @Component({
-  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet, MatButtonModule],
 })
-export class AppComponent {
-  title = 'rate-ideas';
+export class AppComponent implements OnInit {
+  iconsService = inject(IconService);
+
+  ngOnInit(): void {
+    this.iconsService.registerIcons();
+  }
 }

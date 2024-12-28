@@ -1,0 +1,15 @@
+.reaction-active {
+  background-color: #02bf67 !important;
+
+  span,
+  mat-icon {
+    color: white !important;
+    color: white !important;
+  }
+}
+
+.like-button {
+  mat-icon {
+    transform: rotate(180deg) rotateY(180deg);
+  }
+}

@@ -1,0 +1,42 @@
+<div class="bg-white rounded-[0.875rem] p-6 flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+    <div class="flex flex-col">
+      <h3 class="text-gray-700">Jumayev Elyor</h3>
+      <span class="text-sm text-gray-500"> Maktabgacha ta’lim </span>
+    </div>
+
+    <button mat-icon-button class="custom-icon-button">
+      <mat-icon> keyboard_arrow_down </mat-icon>
+    </button>
+  </div>
+  <div class="max-h-[400px] overflow-y-auto">
+    <p class="text-sm text-gray-700 gilroy-medium">
+      The first, characters are read from the input file and assigned a category
+      code (sometimes called "catcode", for short). Combinations of a backslash
+      (actually, any character of category zero) followed by letters (characters
+      of category 11) or a single other character are replaced by a
+      control-sequence token. In this sense, this stage is like lexical
+      analysis, although it does not form numbers from digits. In the next
+      stage, expandable control sequences (such as conditionals or defined
+      macros) are replaced by their replacement text. The input for the third
+      stage is then a stream of characters (including the ones with special
+      meaning) and unexpandable control sequences (typically assignments and
+      visual commands). Here, the characters get assembled into a paragraph, and
+      TeX's paragraph breaking algorithm works by optimizing breakpoints over
+      the whole paragraph.
+    </p>
+  </div>
+  <div class="flex justify-end items-center gap-3">
+    <button mat-button class="primary-icon-button !bg-gray-100 like-button">
+      <span class="flex items-center gap-2">
+        10 K
+      </span>
+    </button>
+
+    <button mat-button class="primary-icon-button !bg-gray-100 reaction-active">
+      <span class="flex items-center gap-2">
+        10 K
+      </span>
+    </button>
+  </div>
+</div>
