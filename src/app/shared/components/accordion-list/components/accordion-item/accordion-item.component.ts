@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -8,4 +8,10 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './accordion-item.component.html',
   styleUrl: 'accordion-item.component.scss',
 })
-export class AccordionItemComponent {}
+export class AccordionItemComponent {
+  isOpened = signal(false);
+
+  toggleOpenBtn(): void {
+    this.isOpened.update((value) => !value);
+  }
+}

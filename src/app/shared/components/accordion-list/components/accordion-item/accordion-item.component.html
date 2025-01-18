@@ -2,15 +2,22 @@
   <div class="flex items-center justify-between">
     <div class="flex flex-col">
       <h3 class="text-gray-700">Jumayev Elyor</h3>
-      <span class="text-sm text-gray-500"> Maktabgacha ta’lim </span>
+      <span class="text-sm text-gray-500"> Maktabgach ta’lim </span>
     </div>
 
-    <button mat-icon-button class="custom-icon-button">
+    <button
+      mat-icon-button
+      class="custom-icon-button"
+      (click)="toggleOpenBtn()"
+    >
       <mat-icon> keyboard_arrow_down </mat-icon>
     </button>
   </div>
   <div class="max-h-[400px] overflow-y-auto">
-    <p class="text-sm text-gray-700 gilroy-medium">
+    <p
+      class="text-sm text-gray-700 gilroy-medium transition-all"
+      [class.truncate]="!isOpened()"
+    >
       The first, characters are read from the input file and assigned a category
       code (sometimes called "catcode", for short). Combinations of a backslash
       (actually, any character of category zero) followed by letters (characters
@@ -26,17 +33,21 @@
       the whole paragraph.
     </p>
   </div>
-  <div class="flex justify-end items-center gap-3">
+  @if(isOpened()) {
+  <div class="flex justify-end items-center gap-3 overflow-hidden">
     <button mat-button class="primary-icon-button !bg-gray-100 like-button">
       <span class="flex items-center gap-2">
         10 K
+        <mat-icon class="!w-6 !h-6" svgIcon="dislike"></mat-icon>
       </span>
     </button>
 
     <button mat-button class="primary-icon-button !bg-gray-100 reaction-active">
       <span class="flex items-center gap-2">
-        10 K
+        46 K
+        <mat-icon class="!w-6 !h-6" svgIcon="dislike"></mat-icon>
       </span>
     </button>
   </div>
+  }
 </div>
