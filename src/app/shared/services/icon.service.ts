@@ -4,6 +4,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export enum Icons {
   Dislike = 'dislike',
+  CustomEmail = 'custom-email',
+  EyeOpen = 'eye-open',
+  EyeClose = 'eye-close',
+  Date = 'date',
 }
 
 @Injectable({

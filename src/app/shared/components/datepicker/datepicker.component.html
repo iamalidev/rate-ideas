@@ -1,0 +1,20 @@
+<div
+  #datepickerContainer
+  (click)="picker.open()"
+  class="bg-gray-50 flex gap-2 cursor-pointer rounded-lg py-2.5 px-3.5 border border-[#D0D5DD] border-solid"
+>
+  <mat-icon svgIcon="date" class="text-gray-500 !min-w-6" />
+
+  <input
+    type="text"
+    [matDatepicker]="picker"
+    [placeholder]="placeholder()"
+    (blur)="onBlur()"
+    [min]="min()"
+    [max]="max()"
+    (focus)="onFocus()"
+    class="bg-transparent w-full focus:outline-none"
+  />
+
+  <mat-datepicker #picker></mat-datepicker>
+</div>

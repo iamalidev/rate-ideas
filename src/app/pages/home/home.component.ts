@@ -11,7 +11,7 @@ import { AccordionListComponent } from '../../shared/components/accordion-list/a
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export default class HomeComponent {
   tabs = signal([
     { label: `Ta'lim`, id: 1 },
     { label: 'Following', id: 2 },

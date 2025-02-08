@@ -1,0 +1,32 @@
+<div
+  #inputContainer
+  (click)="input.focus()"
+  class="bg-gray-50 flex items-center gap-2 cursor-pointer rounded-lg py-2.5 px-3.5 border border-[#D0D5DD] border-solid"
+>
+  <mat-icon svgIcon="custom-email" class="!min-w-6 text-[#667085]" />
+
+  <input
+    #input
+    [type]="
+      !isPasswordHidden()
+        ? type()
+        : type() === inputTypes.Password
+        ? inputTypes.Text
+        : type()
+    "
+    (blur)="onBlur()"
+    [placeholder]="placeholder()"
+    (focus)="onFocus()"
+    class="bg-transparent w-full focus:outline-none"
+  />
+
+  @if(type() === inputTypes.Password) {
+  <button
+    type="button"
+    class="h-6 relative text-gray-500"
+    (click)="onPasswordToggle()"
+  >
+    <mat-icon [svgIcon]="!isPasswordHidden() ? 'eye-open' : 'eye-close'" />
+  </button>
+  }
+</div>
